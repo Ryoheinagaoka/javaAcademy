@@ -1,5 +1,13 @@
+/**
+* 配列基礎
+* @author nagaoka
+*/
 
 
+/**
+*社員の点数を一次元配列に格納し、
+*その配列を用いて社員の点数、過去問を解いた社員の人数を出力するクラス
+*/
 public class Question1{
 	public static void main(String[] args){
 
@@ -14,6 +22,7 @@ public class Question1{
 			i++;
 
 		}
+		//社員の総数をempers.lengthで表記
 		System.out.println("過去問を解いた社員の人数は全部で"+empers.length+"人です。");
 	}
 }

@@ -1,3 +1,6 @@
+//確認表に作成したファイルなので特にコメントはつけませんでした。
+
+
 public class Question3 {
 	public static void main(String[] args) {
 		String s1 = "SeattleConsulting";
