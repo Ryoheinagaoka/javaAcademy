@@ -9,13 +9,15 @@
 public class Question4{
 	public static void main(String[] args){
 
-		
+		//インスタンス化
 		CapsulationPractice cap = new CapsulationPractice();
+		//privateなインスタンス変数privateDataに200を代入
 
+		cap.setPrivateData(200);
+		//numに取得したprivateDataを代入する
+		int num = cap.getPrivateData();
 
-
-
-		System.out.println();
+		System.out.println("CapsulationData:"+num);
 
 	}
 }
@@ -24,13 +26,22 @@ public class Question4{
 */
 class CapsulationPractice{
 
-	private int parivateData = 100;
+	/*
+	*private変数
+	*/
+	private int privateData = 100;
 
+	/*
+	*privateな変数privateDataを取得するメソッド
+	*/
 	public int getPrivateData(){
-		return this.parivateData;
+		return this.privateData;
 	}
-
-	public int setPrivateDate(int i){
-		this.privateDate = i;
+	/**
+	*@param i 入力された値
+	*privateな変数に値を入れるメソッド
+	*/
+	public void setPrivateData(int i){
+		this.privateData = i;
 	}
 }
