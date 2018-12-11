@@ -29,21 +29,29 @@ public class Question2{
 
 class Employee{
 
-
+	//インスタンス変数
 	String name;
+	//インスタンス変数
 	String result;
 
 	/**
-	*
+	*社員の名前を標準出力するメソッド
 	*/
 	public void sayName(){
 		System.out.println("私はシアトルコンサルティングの社員です。名前は"+this.name+"です。");
 	}
-
+	/**
+	*インスタンス変数nameに匿名希望を代入する
+	*/
 	public Employee(){
 		this.name = "匿名希望";
 	}
 
+	/**
+	*@param s
+	*引数sをインスタンス変数nameに代入
+	*もし、sが１０文字より多い場合は１０文字目まで出力する
+	*/
 	public Employee(String s){
 		this.name = s;
 		if(10 < s.length()){

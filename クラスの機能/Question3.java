@@ -36,16 +36,24 @@ class Employee{
 	String result;
 
 	/**
-	*
+	*名前を標準出力するメソッド
 	*/
 	public void sayName(){
 		System.out.println("私はシアトルコンサルティングの社員です。名前は"+this.name+"です。");
 	}
 
+	/**
+	*インスタンス変数nameに匿名希望を代入するメソッド
+	*/
 	public Employee(){
 		this.name = "匿名希望";
 	}
 
+	/**
+	*@param s
+	*引数sをインスタンス変数nameに代入
+	*もし、sが１０文字より多い場合は１０文字目まで出力する
+	*/
 	public Employee(String s){
 		this.name = s;
 		if(10 < s.length()){
@@ -66,7 +74,7 @@ class Employee2{
 	static int i = 0;
 
 	/**
-	*
+	*名前を標準出力するメソッド
 	*/
 	public void sayName(){
 		System.out.println("私はシアトルコンサルティングの社員です。名前は"+this.name+"です。");
@@ -75,13 +83,18 @@ class Employee2{
 	/**
 	*社員人数をカウントするメソッド
 	*/
-
 	public Employee2(){
 		this.name = "匿名希望";
 
 		Employee2.i++;
 	}
 
+	/**
+	*@param s
+	*引数sをインスタンス変数nameに代入
+	*もし、sが１０文字より多い場合は１０文字目まで出力する
+	*出力完了後社員人数を+1する
+	*/
 	public Employee2(String s){
 		this.name = s;
 		if(10 < s.length()){
@@ -89,7 +102,9 @@ class Employee2{
 		}
 		Employee2.i++;
 	}
-
+	/**
+	*社員人数を出力するメソッド
+	*/
 	public static void empcount(){
 		System.out.println("社員は全部で"+i+"人です");
 	}

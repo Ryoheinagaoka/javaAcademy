@@ -28,6 +28,14 @@ public class Question1{
 }
 
 
+
+
+
+
+
+
+
+
 //↓問題を勘違いしたコード描き途中　一応残しておきます。
 
 // public class Question1{
