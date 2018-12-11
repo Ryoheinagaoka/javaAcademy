@@ -38,7 +38,7 @@ class CapsulationPractice{
 		return this.privateData;
 	}
 	/**
-	*@param i 入力された値
+	*@param i
 	*privateな変数に値を入れるメソッド
 	*/
 	public void setPrivateData(int i){
