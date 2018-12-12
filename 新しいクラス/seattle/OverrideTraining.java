@@ -41,6 +41,7 @@ class SeattleSSEmployee extends SeattleEmployee {
       /**
       *親クラスのgetDeptメソッドをオーバーライド
       */
+      @Override
       public String getDept(){
       return "TeamTech推進室";
       }
