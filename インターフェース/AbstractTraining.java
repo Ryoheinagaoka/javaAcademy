@@ -5,8 +5,8 @@
 
 //抽象クラス
 abstract class Face{
-
-abstract void nose();
+	//継承用のメソッドの為、処理等は特になし
+	abstract void nose();
 
 }
 
@@ -23,15 +23,15 @@ class Nose extends Face {
 //動作確認用メインメソッド
 public class AbstractTraining {
 
-/*
-*noseメソッドが出力させるメソッド
-*/
-public static void main(String[] args){
+	/*
+	*noseメソッドが出力させるメソッド
+	*/
+	public static void main(String[] args){
 
-	nose n = new nose();
+		nose n = new nose();
 
-	n.nose();
+		n.nose();
 
-}
+	}
 
 }

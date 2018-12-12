@@ -21,8 +21,8 @@ class SeattleEmployee {
       }
 
       /**
-      * 社員氏名をセットする 
-      * @param empName
+      * 社員氏名をセットする
+      * @param empName 社員氏名
       */
       public void setEmpName(String empName) {
           this.empName = empName;
@@ -43,7 +43,7 @@ class SeattleSSEmployee extends SeattleEmployee {
       */
       @Override
       public String getDept(){
-      return "TeamTech推進室";
+            return "TeamTech推進室";
       }
 }
 

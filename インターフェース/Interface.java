@@ -6,10 +6,10 @@
 //インターフェースの作成
 interface Face{
 
-public String mouth();
+	public String mouth();
 
-public int eye(int i);
+	public int eye(int i);
 
-void nose();
+	void nose();
 
 }
