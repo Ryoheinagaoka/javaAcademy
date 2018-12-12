@@ -10,7 +10,7 @@ abstract void nose();
 
 }
 
-class nose extends Face {
+class Nose extends Face {
 
 	//抽象クラスよりnoseメソッドをオーバーライド
 	@Override
@@ -21,8 +21,11 @@ class nose extends Face {
 }
 
 //動作確認用メインメソッド
-public class Question1{
+public class AbstractTraining {
 
+/*
+*noseメソッドが出力させるメソッド
+*/
 public static void main(String[] args){
 
 	nose n = new nose();

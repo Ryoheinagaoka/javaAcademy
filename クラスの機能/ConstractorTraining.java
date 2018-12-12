@@ -4,9 +4,13 @@
 */
 
 /**
-*クラス名 Question2
+*クラス名 ConstractorTraining
 */
-public class Question2{
+public class ConstractorTraining{
+
+	/**
+	*インスタンス化された、社員の名前を出力するメソッド
+	*/
 	public static void main(String[] args){
 
 		Employee emp = new Employee();
@@ -48,14 +52,14 @@ class Employee{
 	}
 
 	/**
-	*@param s
+	*@param name 社員名
 	*引数sをインスタンス変数nameに代入
 	*もし、sが１０文字より多い場合は１０文字目まで出力する
 	*/
-	public Employee(String s){
-		this.name = s;
-		if(10 < s.length()){
-		 this.name = s.substring(0,10);
+	public Employee(String name){
+		this.name = name;
+		if(10 < name.length()){
+		 this.name = name.substring(0,10);
 		}
 
 	}

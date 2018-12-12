@@ -3,27 +3,29 @@
 * @author nagaoka
 */
 
-
 /**
 *社員の点数を一次元配列に格納し、
 *その配列を用いて社員の点数、過去問を解いた社員の人数を出力するクラス
 */
-public class Question1{
+public class arrayTraining{
+	/**
+	*社員の点数を一次元配列に格納し、
+	*その配列を用いて社員の点数、過去問を解いた社員の人数を出力するメソッド
+	*/
 	public static void main(String[] args){
 
 		Integer[] empers = {20,30,45,35};
 
 		//ループ用　何番目の人か判断するための変数
-		int i =1;
+		int loop = 0;
 
-		for(int emp:empers){
-			System.out.println(i+"番目の社員の点数は"+emp+"です");
-
-			i++;
-
+		for(int emp : empers){
+			loop++;
+			System.out.println(loop + "番目の社員の点数は" + emp + "です");
 		}
+
 		//社員の総数をempers.lengthで表記
-		System.out.println("過去問を解いた社員の人数は全部で"+empers.length+"人です。");
+		System.out.println("過去問を解いた社員の人数は全部で" + loop + "人です。");
 	}
 }
 

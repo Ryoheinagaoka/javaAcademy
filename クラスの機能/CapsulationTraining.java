@@ -4,9 +4,13 @@
 */
 
 /**
-*クラス名 Question4
+*クラス名 CapsulationTraining
 */
-public class Question4{
+public class CapsulationTraining{
+
+	/**
+	*praivateDataに値をセットし、出力するメソッド
+	*/
 	public static void main(String[] args){
 
 		//インスタンス化
@@ -38,10 +42,10 @@ class CapsulationPractice{
 		return this.privateData;
 	}
 	/**
-	*@param i
+	*@param number privateな変数に入れる値
 	*privateな変数に値を入れるメソッド
 	*/
-	public void setPrivateData(int i){
-		this.privateData = i;
+	public void setPrivateData(int number){
+		this.privateData = number;
 	}
 }

@@ -7,7 +7,7 @@
 *クラス名　Quesiton1
 */
 
-public class Question1{
+public class overloadTraining{
 	public static void main(String[] args){
 
 		//methodsクラスをインスタンス化

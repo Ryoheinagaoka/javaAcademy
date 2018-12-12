@@ -13,27 +13,31 @@ import java.util.List;
 *ArrayListにチーム10月入社研修メンバーの名前を追加し、
 *入力した全員の名前、人数を出力するクラス
 */
-class Question3{
+class Team18info{
+	/*
+	*ArrayListにチーム10月入社研修メンバーの名前を追加し、
+	*入力した全員の名前、人数を出力するクラス
+	*/
 	public static void main(String[] args){
 
-		//ArrayListを定義
-		List<String> member = new ArrayList<String>();
+		//配列にメンバー名を格納
+		String[] names = {"長岡","安田","久保田","須藤","町田","山本"};
 
-		// 要素を追加
-		member.add("長岡");
-		member.add("安田");
-		member.add("久保田");
-		member.add("須藤");
-		member.add("町田");
-		member.add("山本");
+		//ArrayListを定義
+		List<String> members= new ArrayList<String>();
+
+		//memberにメンバー名を格納
+		for(String name : names){
+			members.add(name);
+		}
 
 		System.out.println("10月入社のメンバーを紹介します。");
 
-		for(String mem : member){
+		for(String member : members){
 			System.out.println(mem);
 		}
 
-		System.out.println("以上"+member.size()+"名。よろしくお願い致します。");
+		System.out.println("以上" + member.size() + "名。よろしくお願い致します。");
 
 	}
 }
