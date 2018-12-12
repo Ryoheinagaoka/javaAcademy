@@ -3,11 +3,13 @@
 * @author nagaoka
 */
 
-public class Question1 {
-
+public class ExceptionTraining {
+	/**
+	*入力された実行時引数の値によってエラー出力を
+	*/
 	public static void main(String[] args) {
 
-	 try{
+	try{
 
 	 	/**
 	 	*@param args
@@ -22,7 +24,7 @@ public class Question1 {
 	   System.out.println("正常");
 	   System.out.println("終了");
 
-		 }catch(ArrayIndexOutOfBoundsException | NumberFormatException e){
+	}catch(ArrayIndexOutOfBoundsException | NumberFormatException e){
 		 	/**
 		 	*実行時引数の数が0個の場合or２個設定されていない場合下記エラー処理
 		 	*/

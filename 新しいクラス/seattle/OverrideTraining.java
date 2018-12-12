@@ -7,12 +7,12 @@ package seattle;
 
 class SeattleEmployee {
 
-    /**
-    * 社員氏名
-    */
+      /**
+      * 社員氏名
+      */
       private String empName;
 
-    /**
+      /**
       * 社員氏名を取得する
       * @return empName
       */
@@ -20,17 +20,17 @@ class SeattleEmployee {
             return empName;
       }
 
-    /**
-    * 社員氏名をセットする 
-    * @param empName
-    */
+      /**
+      * 社員氏名をセットする 
+      * @param empName
+      */
       public void setEmpName(String empName) {
           this.empName = empName;
       }
 
-    /**
-    * 所属部署を取得する
-    */
+      /**
+      * 所属部署を取得する
+      */
       public String getDept(){
             return "無所属";
       }
@@ -41,12 +41,17 @@ class SeattleSSEmployee extends SeattleEmployee {
       /**
       *親クラスのgetDeptメソッドをオーバーライド
       */
+      @Override
       public String getDept(){
       return "TeamTech推進室";
       }
 }
 
-public class Question2{
+public class OverrideTraining{
+/**
+*インスタンスを作成し、それぞれ任意の社員名をセットし、
+*所属部署、社員名を出力するメソッド
+*/
   public static void main(String[] args){
       //親クラスをインスタンス化
       SeattleEmployee emp = new SeattleEmployee();
