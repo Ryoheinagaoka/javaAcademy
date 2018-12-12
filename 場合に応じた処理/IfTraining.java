@@ -13,12 +13,10 @@ import java.util.Scanner;
 *1~10の整数値以外が入力された場合は例外ハンドリングする
 */
 
-public class Question1{
-
+public class IfTraining{
 /**
 *値を入力してメッセージを出力するメソッド
 */
-
 	public static void main(String[] args){
 
 		System.out.println("1~10の整数を入力してください");
@@ -27,24 +25,23 @@ public class Question1{
 	    try{
 
 	    	//文字入力を受け付ける為のパッケージ
-	    	Scanner scan = new Scanner(System.in);
-
+	    	Scanner scan = new Scanner(System.in);s
 			int num = scan.nextInt();
 
 			//numが１未満,11以上の場合エラーを投げる
-			if(num <= 1 || 10 < num){
+			if (num < 1 || 10 < num){
 				obj();
 			}
 		//入力された1~10の値に応じて処理をする
-		if(1 <= num && num < 5){
+		if (1 <= num && num < 5){
 			System.out.println("５未満の整数"+num+"が入力されました");
-		}else if(num == 5){
+		}else if (num == 5){
 			System.out.println("5が入力されました");
-		}else if(6 <= num && num < 11){
+		}else if (6 <= num && num < 11){
 			System.out.println("6以上の整数"+num+"が入力されました");
 		}
 		//エラーが発生した際は下記のメッセージを返す
-	 	}catch(Exception e){
+	 	}catch (Exception e){
 			System.err.println("1~10の整数を入力してください!!!!!!");
 		}
 
@@ -54,9 +51,7 @@ public class Question1{
 *エラーを投げる為のメソッド
 */
 static void obj() throws Exception{
-
 	    	throw new Exception();
-
 }
 }
 
