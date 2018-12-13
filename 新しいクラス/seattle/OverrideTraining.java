@@ -49,8 +49,10 @@ class SeattleSSEmployee extends SeattleEmployee {
 
 public class OverrideTraining{
 /**
+*mainメソッド
 *インスタンスを作成し、それぞれ任意の社員名をセットし、
 *所属部署、社員名を出力するメソッド
+*@param args コマンドライン引数
 */
   public static void main(String[] args){
       //親クラスをインスタンス化

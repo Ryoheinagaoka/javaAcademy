@@ -36,7 +36,7 @@ public class SeattleEmployee {
       }
 }
 
-public class seattleSSEmployee extends SeattleEmployee {
+public class SeattleSSEmployee extends SeattleEmployee {
 
 　　
 

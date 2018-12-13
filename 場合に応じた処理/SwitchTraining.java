@@ -10,6 +10,11 @@
 */
 public class SwitchTraining{
 
+  /**
+  *mainメソッド
+  *switch文を使用し、場合に応じてメッセージを出力するメソッド
+  *@param args コマンドライン引数
+  */
   public static void main(String[] args){
 
     //文字列以外が入力された際にエラーを吐く

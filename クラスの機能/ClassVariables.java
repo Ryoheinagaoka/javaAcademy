@@ -7,6 +7,12 @@
 *クラス名 Question2
 */
 public class ClassVariables{
+
+	/**
+	*mainメソッド
+	*社員の名前を出力するメソッド
+	*@param args コマンドライン引数
+	*/
 	public static void main(String[] args){
 
 		Employee2 emp = new Employee2();

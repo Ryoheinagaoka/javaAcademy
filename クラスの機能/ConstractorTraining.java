@@ -9,7 +9,9 @@
 public class ConstractorTraining{
 
 	/**
+	*@mainメソッド
 	*インスタンス化された、社員の名前を出力するメソッド
+	@param args コマンドライン引数
 	*/
 	public static void main(String[] args){
 

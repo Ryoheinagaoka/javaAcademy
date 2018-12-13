@@ -9,7 +9,9 @@
 public class CapsulationTraining{
 
 	/**
+	*mainメソッド
 	*praivateDataに値をセットし、出力するメソッド
+	*@param args コマンドライン引数
 	*/
 	public static void main(String[] args){
 

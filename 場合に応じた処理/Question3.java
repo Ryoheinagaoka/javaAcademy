@@ -2,6 +2,11 @@
 
 
 public class Question3 {
+/**
+*mainメソッド
+*問題文のコードが動作するかtestするメソッド
+@param args コマンドライン引数
+*/
 	public static void main(String[] args) {
 		String s1 = "SeattleConsulting";
 		String s2 = "SeattleConsulting";

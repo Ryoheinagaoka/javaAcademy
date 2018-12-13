@@ -14,9 +14,11 @@ import java.util.List;
 *入力した全員の名前、人数を出力するクラス
 */
 class Team18info{
-	/*
+	/**
+	*mainメソッド
 	*ArrayListにチーム10月入社研修メンバーの名前を追加し、
 	*入力した全員の名前、人数を出力するクラス
+	*@param args コマンドライン引数
 	*/
 	public static void main(String[] args){
 

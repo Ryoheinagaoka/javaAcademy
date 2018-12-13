@@ -9,8 +9,10 @@
 */
 public class ArrayTraining{
 	/**
+	*mainメソッド
 	*社員の点数を一次元配列に格納し、
 	*その配列を用いて社員の点数、過去問を解いた社員の人数を出力するメソッド
+	*@param コマンドライン引数
 	*/
 	public static void main(String[] args){
 

@@ -1,7 +1,11 @@
 // 例外処理学習用のテストコード
 
-class test{
-
+class Test{
+	/**
+	*mainメソッド
+	*エラーを投げてキャッチさせるメソッド
+	*@param args コマンドライン
+	*/
    public static void main(String args[]){
 
  try{
@@ -26,9 +30,7 @@ class test{
  static void obj() throws Exception{
 
     throw new Exception
-                              ("ArrayIndexOutOfBoundsException例外発生");
-
- 
+    ("ArrayIndexOutOfBoundsException例外発生");
     }
 
 }

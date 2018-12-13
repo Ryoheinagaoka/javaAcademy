@@ -23,8 +23,10 @@ class Nose extends Face {
 //動作確認用メインメソッド
 public class AbstractTraining {
 
-	/*
+	/**
+	*mainメソッド
 	*noseメソッドが出力させるメソッド
+	*@param コマンドライン引数
 	*/
 	public static void main(String[] args){
 

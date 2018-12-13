@@ -1,3 +1,4 @@
+
 /**
 * 配列基礎
 * @author nagaoka
@@ -28,7 +29,6 @@ public class ArrayTraining{
 		System.out.println("過去問を解いた社員の人数は全部で" + loop + "人です。");
 	}
 }
-
 
 
 

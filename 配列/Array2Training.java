@@ -12,8 +12,10 @@
 
 class Array2Training{
 	/**
+	*mainメソッド
 	*二次元配列で４人の点数を格納し、
 	*それぞれの社員の１回目から３回目までの結果を出力するメソッド。
+	*@param args コマンドライン引数
 	*/
 	public static void main(String[] args){
 

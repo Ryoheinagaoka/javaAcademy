@@ -8,10 +8,15 @@
 */
 
 public class OverloadTraining{
+	/**
+	*mainメソッド
+	*インスタンスメソッドを使用するメソッド
+	*@param args コマンドライン引数
+	*/
 	public static void main(String[] args){
 
 		//methodsクラスをインスタンス化
-		methods met = new methods();
+		Methods met = new Methods();
 
 		//インスタンス化した機能を使用する
 		met.sameName();
@@ -23,7 +28,7 @@ public class OverloadTraining{
 	}
 }
 
-class methods{
+class Methods{
 
 	//引数を保持しないsameNameメソッド
 	public void sameName(){

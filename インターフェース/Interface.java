@@ -10,6 +10,6 @@ interface Face{
 
 	public int eye(int i);
 
-	void nose();
+	public void nose();
 
 }

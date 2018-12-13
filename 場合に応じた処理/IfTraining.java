@@ -15,7 +15,9 @@ import java.util.Scanner;
 
 public class IfTraining{
 /**
+*mainメソッド
 *値を入力してメッセージを出力するメソッド
+@param args コマンドライン引数
 */
 	public static void main(String[] args){
 

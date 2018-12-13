@@ -9,7 +9,9 @@
 */
 public class ForTraining{
 	/**
+	*mainメソッド
 	*1~実行時引数で渡された値の和を計算するメソッド
+	*@param args コマンドライン引数
 	*/
 	public static void main(String[] args){
 
