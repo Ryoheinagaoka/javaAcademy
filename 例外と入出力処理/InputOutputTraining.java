@@ -4,61 +4,73 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Question2{
+import java.io.File;
+
+public class InputOutputTraining{
+    /**
+    *mainメソッド
+    *Test.csvファイルを読み取り
+    *四則演算後、Test1.csvに書き込むメソッド
+    *@param args コマンドライン引数
+    */
     public static void main(String[] args){
         try{
+            Scanner scanner = new Scanner(new File("./file/input/Test.csv"));
+                scanner.useDelimiter(",");     //・・・①
+                System.out.println("ファイルを読み込みました。");
 
-        Scanner scanner = new Scanner(new File("./file/input/Test.csv"));
-            scanner.useDelimiter(",");     //・・・①
-            System.out.println("ファイルを読み込みました。");
-
-            List<Integer> list = new ArrayList<>();
-
-            //取り出した値を入れる変数
-            int b =0;
-            //加算の答えを入れる変数
-            int x =0;
-            //減算の答えを入れる変数
-            int y =0;
-            //乗算の答えを入れる変数
-            int z =1;
-            //除算の答えを入れる変数
-            int a =0;
+                //取り出した値を入れる変数
+                int result =0;
+                //加算の答えを入れる変数
+                int sum =0;
+                //減算の答えを入れる変数
+                int diff =0;
+                //乗算の答えを入れる変数
+                int pro =1;
+                //除算の答えを入れる変数
+                int quo =0;
 
 
-            /**
-            *全ての値を四則演算するメソッド
-            */
-            while(scanner.hasNext()) {
+                /**
+                *全ての値を四則演算するメソッド
+                */
+                while(scanner.hasNext()){
+                    result = scanner.nextInt();
 
-               b = scanner.nextInt();
+                    sum += result;
+                    if(diff==0){
+                        diff = result;
+                    }else{
+                        diff -= result;
+                    }
+                    pro *= result;
 
-               x += b;
-               y -= b;
-               z *= b;
-               if(a==0){
-                a = b;
-               }else{
-               a /= b;
-               }
+                    if(quo==0){
+                        quo = result;
+                    }else{
+                        quo /= result;
+                    }
+                }
 
+            File file = new File("./file/output/TestOutput.txt");
+
+            // ファイルの存在を確認する
+            if (file.exists()){
+                PrintWriter pw = new PrintWriter
+                (new BufferedWriter(new FileWriter("./file/output/TestOutput.txt")));
+
+                pw.println(sum);
+                pw.println(diff);
+                pw.println(pro);
+                pw.println(quo);
+
+                System.out.println("ファイルに書き込みました。");
+
+                pw.close();
+            }else{
+                throw new IOException();
             }
-
-            System.out.println("ファイルの中身を出力しました。");
-
-            PrintWriter pw = new PrintWriter
-            (new BufferedWriter(new FileWriter("./file/output/Test1.csv")));
-
-            pw.println(x);
-            pw.println(y);
-            pw.println(z);
-            pw.println(a);
-
-            System.out.println("ファイルに書き込みました。");
-
-            pw.close();
-        }
-        catch(IOException e){
+        }catch(IOException e){
             System.out.println("入出力エラーです。");
         }
     }

@@ -5,16 +5,14 @@
 
 public class ExceptionTraining {
 	/**
-	*入力された実行時引数の値によってエラー出力を
+	*mainメソッド
+	*入力された実行時引数の値によってエラー出力をするメソッド
+	*@param args コマンドライン引数
 	*/
 	public static void main(String[] args) {
 
 	try{
 
-	 	/**
-	 	*@param args
-	 	*実行時引数をint型に変換
-	 	*/
 	   int i = Integer.parseInt(args[0]);
 	   int j = Integer.parseInt(args[1]);
 
@@ -22,23 +20,15 @@ public class ExceptionTraining {
 
 	   //エラーが発生しなければ下記処理実行
 	   System.out.println("正常");
-	   System.out.println("終了");
 
-	}catch(ArrayIndexOutOfBoundsException | NumberFormatException e){
-		 	/**
-		 	*実行時引数の数が0個の場合or２個設定されていない場合下記エラー処理
-		 	*/
-		 	if (e instanceof ArrayIndexOutOfBoundsException ) {
-		 		System.out.println("引数は二つ設定してください");
-		 		System.out.println("終了");
-		 	}
-		 	/**
-		 	*数字以外が設定された場合下記エラー処理
-		 	*/
-		 	if (e instanceof NumberFormatException ) {
-		 		System.out.println("数字を入力してください");
-		 		System.out.println("終了");
-			}
-		 }
- 	}
-}
+	}catch(ArrayIndexOutOfBoundsException e){
+		//引数の数が２つではない場合下記エラー処理
+ 		System.out.println("引数は二つ設定してください");
+	}catch(NumberFormatException e){
+	 	//数字以外が設定された場合下記エラー処理
+ 		System.out.println("数字を入力してください");
+	}finally{
+		System.out.println("終了");
+	}
+	}
+ }
