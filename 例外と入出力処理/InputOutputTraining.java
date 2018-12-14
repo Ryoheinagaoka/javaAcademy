@@ -71,7 +71,7 @@ public class InputOutputTraining{
                 throw new IOException();
             }
         }catch(IOException e){
-            System.out.println("入出力エラーです。");
+            System.out.println("ファイルがありません！");
         }
     }
 }
