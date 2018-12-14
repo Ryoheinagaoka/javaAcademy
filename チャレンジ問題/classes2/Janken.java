@@ -1,5 +1,3 @@
-// package classes;
-
 /**
 * じゃんけんゲーム
 * @author nagaoka
@@ -16,7 +14,7 @@ public class Janken{
 		//引数に名前を入れて Player.nameにセット
 
 		Player tom = new Player("tom");
-		Player pepper = new Player("pepper");
+		CrazyPlayer pepper = new CrazyPlayer("pepper");
 
 		//両者のジャンケンの手をセット
 		tom.sethand();
