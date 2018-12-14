@@ -9,6 +9,7 @@ import java.util.Random;
 public class Challenge1{
 	/**
 	*player1,player2のじゃんけんの結果を出力するメソッド
+	*@param agrs コマンドライン引数
 	*/
 	public static void main(String[] args){
 

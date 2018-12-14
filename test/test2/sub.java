@@ -1,6 +1,8 @@
-class sub{
+package test2;
+
+public class sub{
 	String name;
-	void sayHi(){
+	public void sayHi(){
 		System.out.println("hi");
 	}
 }

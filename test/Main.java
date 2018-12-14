@@ -1,9 +1,9 @@
-import test2 sub
+import test2.sub.*;
 
 public class Main{
 	public static void main(String[] args){
 
-		sub s = new sub();
+		test2.sub s = new test2.sub();
 
 		s.sayHi();
 
