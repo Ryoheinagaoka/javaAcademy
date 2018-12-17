@@ -39,7 +39,6 @@ public class InputOutputTraining{
                 //除算の答えを入れる変数
                 int quo = list.get(0);
 
-
                 /**
                 *全ての値を四則演算するメソッド
                 */
