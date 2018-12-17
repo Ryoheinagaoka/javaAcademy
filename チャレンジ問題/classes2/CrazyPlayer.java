@@ -10,6 +10,6 @@ public class CrazyPlayer extends Player{
 
 	@Override
 	public void sethand(){
-		this.hand = this.rock;
+		this.hand = 1;
 	}
 }

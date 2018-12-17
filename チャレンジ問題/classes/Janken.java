@@ -23,9 +23,10 @@ public class Janken{
 		pepper.sethand();
 
 		System.out.println(tom.name + "さん対" + pepper.name + "さんのじゃんけんを開始します。");
-		System.out.println(tom.name + "さん : " + tom.hand);
-		System.out.println(pepper.name + "さん : " + pepper.hand);
-
+		System.out.print(tom.name + "さん : ");
+		tom.changehand(tom.hand);
+		System.out.print(pepper.name + "さん : ");
+		pepper.changehand(pepper.hand);
 		Judge judge = new Judge(tom.name,pepper.name);
 
 		judge.judge(tom.hand,pepper.hand);

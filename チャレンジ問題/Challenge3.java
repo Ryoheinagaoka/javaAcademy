@@ -17,6 +17,7 @@ class Challenge3{
 	/**
 	*二次元配列で４人の点数を格納し、
 	*それぞれの社員の１回目から３回目までの結果を出力するメソッド。
+	*@param args コマンドライン引数
 	*/
 	public static void main(String[] args){
 
@@ -28,6 +29,9 @@ class Challenge3{
 			{35,40,50}
 		};
 
+		//合計点を入れる用の変数
+		int sum = 0;
+
 		//ArrayListを定義
 		List<Integer> averages = new ArrayList<Integer>();
 
@@ -37,27 +41,17 @@ class Challenge3{
 		for(int i =0;i < empers.length; i++){
 			for(int j = 0; j < seiseki[i].length; j++){
 				System.out.println(empers[i] + "の" + (j + 1) + "回目の点数は" + seiseki[i][j] + "点です。");
-			}
-		}
-
-		//合計点用の変数
-		int sum = 0;
-		//seisekiの要素数
-		int testcount = 0;
-
-		for(int i =0;i < empers.length; i++){
-			for(int j = 0; j < seiseki[i].length; j++){
 				sum += seiseki[i][j];
-				testcount ++;
 			}
-			sum /= testcount;
-			System.out.println(empers[i] + "の平均点は" + sum + "点です");
-
+			sum /= seiseki[i].length;
 			// 平均点を追加
 			averages.add(sum);
 
-			testcount = 0;
 			sum = 0;
+		}
+
+		for(int i = 0; i < averages.size(); i++){
+			System.out.println(empers[i] + "の平均点は" + averages.get(i) + "点です");
 		}
 
 		// 平均点が60点以下か調べる
