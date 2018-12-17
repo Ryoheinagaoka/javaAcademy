@@ -1,4 +1,4 @@
-public class CrazyPlayer extends Player{
+public class CrazyPlayer{
 	/**
 	*オーバーライド
 	*手を設定するインスタンスメソッド

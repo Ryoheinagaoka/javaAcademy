@@ -14,7 +14,11 @@ public class Janken{
 		//引数に名前を入れて Player.nameにセット
 
 		Player tom = new Player("tom");
-		CrazyPlayer pepper = new CrazyPlayer("pepper");
+		Player pepper = new Player("pepper");
+
+		//戦略を決める
+		tom.settac();
+		pepper.setCrazytac();
 
 		//両者のジャンケンの手をセット
 		tom.sethand();

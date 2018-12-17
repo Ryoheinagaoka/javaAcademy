@@ -8,107 +8,98 @@ import java.util.Random;
 
 public class Challenge1{
 	/**
-	*player1,player2のじゃんけんの結果を出力するメソッド
+	*1~3のランダムな数値を作成するメソッド
+	*@return
+	*/
+	public static int makeRandom(){
+		//Randomクラスの生成
+		Random rnd = new Random();
+		//playerhand用の変数に1~3のランダムな値を代入
+		int random = rnd.nextInt(3) + 1;
+		return random;
+	}
+
+	/**
+	*playerhandの変数の中に入っている数字を元にジャンケンの手を出力するメソッド
+	*@param hand playerhand変数を入れる
+	*/
+	public static void changehand(int hand){
+		switch(hand){
+			case 1:
+				System.out.println("グー");
+				break;
+			case 2:
+				System.out.println("チョキ");
+				break;
+			case 3:
+				System.out.println("パー");
+				break;
+		}
+	}
+
+	/**
+	*player1,player2のじゃんけんの結果を出力するメソッドå
 	*@param agrs コマンドライン引数
 	*/
 	public static void main(String[] args){
 
-		//Randomクラスの生成
-		Random rnd = new Random();
-		//player1用の変数に1~3のランダムな値を代入
-		int random1 = rnd.nextInt(3) + 1;
-		//player2用の変数に1~3のランダムな値を代入
-		int random2 = rnd.nextInt(3) + 1;
-
-		//グー用の変数
-		String rock = "グー" ;
-		//チョキ用の変数
-		String scissors = "チョキ" ;
-		//パー用の変数
-		String paper = "パー" ;
-
 		//player1の手
-		String player1hand = "";
+		int player1hand = makeRandom();
 		//player2の手
-		String player2hand = "";
+		int player2hand = makeRandom();
 
 		//じゃんけんの結果
 		String judge = "";
 
-		//random2の数値によって出したじゃんけんの手を設定
-		switch (random1){
-        	case 1:
-        		player1hand = rock;
-        		break;
-        	case 2:
-        		player1hand = scissors;
-        		break;
-	        case 3:
-        		player1hand = paper;
-        		break;
-		}
-
-		//random1の数値によって出したじゃんけんの手を設定
-		switch (random2){
-        	case 1:
-        		player2hand = rock;
-        		break;
-        	case 2:
-        		player2hand = scissors;
-        		break;
-	        case 3:
-        		player2hand = paper;
-        		break;
-		}
-
 		//player1を主軸として、player2が何を出したかによって
 		//出力を変えるメソッド
-		if(player1hand == "グー"){
+		if(player1hand == 1){
 			switch(player2hand){
-				case "グー":
+			case 1:
         		judge = "あいこです";
         		break;
-        	case "チョキ":
+        	case 2:
         		judge = "player1の勝ちです。";
         		break;
-	        case "パー":
+	        case 3:
         		judge = "player2の勝ちです。";
         		break;
         	}
-		}else if(player1hand == "チョキ"){
+		}else if(player1hand == 2){
 			switch(player2hand){
-				case "グー":
+			case 1:
         		judge = "player2の勝ちです。";
         		break;
-        	case "チョキ":
+        	case 2:
         		judge = "あいこです";
         		break;
-	        case "パー":
+	        case 3:
         		judge = "player1の勝ちです。";
         		break;
         	}
 		}else{
 			switch(player2hand){
-				case "グー":
+				case 1:
         		judge = "player1の勝ちです。";
         		break;
-        	case "チョキ":
+        	case 2:
         		judge = "player2の勝ちです。";
         		break;
-	        case "パー":
+	        case 3:
         		judge = "あいこです";
         		break;
 			}
-
 		}
 
 		//結果出力
 
 		System.out.println("じゃんけんを開始します");
 
-		System.out.println("player1 :" + player1hand);
+		System.out.print("player1 :");
+		changehand(player1hand);
 
-		System.out.println("player2 :" + player2hand);
+		System.out.print("player2 :");
+		changehand(player2hand);
 
 		System.out.println(judge);
 

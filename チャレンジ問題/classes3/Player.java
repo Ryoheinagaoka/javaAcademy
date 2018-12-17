@@ -8,7 +8,31 @@
 //乱数を使用するためにimport
 import java.util.Random;
 
-public class Player{
+public class Player {
+
+	//Tactics型の変数を宣言
+	Tactics[] tac ;
+
+	/**
+	*ランダムにじゃんけんの手を返すメソッド
+	*@return
+	*/
+	public RandomTactics readTactics();
+	public CrazyTactics razyReadTactics();
+
+	/**
+	*Tactics型の変数に戦略をセットするメソッド
+	*/
+	void settac(){
+		this.tac[] = readTactics();
+	}
+
+	/**
+	*Tactics型の変数に戦略をセットするメソッド
+	*/
+	void setCrazytac(){
+		this.tac[] = CreazyReadTactics();
+	}
 
 	//名前を格納するインスタンス変数
 	String name;
@@ -29,14 +53,9 @@ public class Player{
 	*/
 	public void sethand(){
 
-		//Randomクラスの生成
-		Random rnd = new Random();
-		//ジャンケンの手の判定用の変数randomに1~3のランダムな値を代入
-		int random = rnd.nextInt(3) + 1;
-
-		if(random == 1){
+		if(this.tac == 1){
 			this.hand = this.rock;
-		}else if(random == 2){
+		}else if(this.tac == 2){
 			this.hand = this.scissors;
 		}else{
 			this.hand = this.paper;
