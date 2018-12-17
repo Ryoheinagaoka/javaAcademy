@@ -19,43 +19,40 @@ public class InputOutputTraining{
                 scanner.useDelimiter(",");     //・・・①
                 System.out.println("ファイルを読み込みました。");
 
-                //取り出した値を入れる変数
-                int result =0;
+                //取り出した値を代入する用のlist
+                List<Integer> list = new ArrayList<Integer>();
+
+                //読み込んだ値を格納する
+                int result = 0;
+                //取り出した値を配列に代入
+                while(scanner.hasNext()){
+                    result = scanner.nextInt();
+                    list.add(result);
+                }
+
                 //加算の答えを入れる変数
-                int sum =0;
+                int sum = list.get(0);
                 //減算の答えを入れる変数
-                int diff =0;
+                int diff = list.get(0);
                 //乗算の答えを入れる変数
-                int pro =1;
+                int pro = list.get(0);
                 //除算の答えを入れる変数
-                int quo =0;
+                int quo = list.get(0);
 
 
                 /**
                 *全ての値を四則演算するメソッド
                 */
-                while(scanner.hasNext()){
-                    result = scanner.nextInt();
+                for(int i = 1; i < list.size();i++){
 
-                    sum += result;
-                    if(diff==0){
-                        diff = result;
-                    }else{
-                        diff -= result;
-                    }
-                    pro *= result;
+                    sum += list.get(i);
+                    diff -= list.get(i);
+                    pro *= list.get(i);
+                    quo /= list.get(i);
 
-                    if(quo==0){
-                        quo = result;
-                    }else{
-                        quo /= result;
-                    }
                 }
-
             File file = new File("./file/output/TestOutput.txt");
 
-            // ファイルの存在を確認する
-            if (file.exists()){
                 PrintWriter pw = new PrintWriter
                 (new BufferedWriter(new FileWriter("./file/output/TestOutput.txt")));
 
@@ -67,9 +64,6 @@ public class InputOutputTraining{
                 System.out.println("ファイルに書き込みました。");
 
                 pw.close();
-            }else{
-                throw new IOException();
-            }
         }catch(IOException e){
             System.out.println("ファイルがありません！");
         }
