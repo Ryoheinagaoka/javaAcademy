@@ -1,4 +1,4 @@
- ∫import java.io.*;
+import java.io.*;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;

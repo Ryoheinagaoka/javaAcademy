@@ -52,7 +52,6 @@ public class Challenge1{
 		String judge = "";
 
 		//player1を主軸として、player2が何を出したかによって
-		//出力を変えるメソッド
 		if(player1hand == 1){
 			switch(player2hand){
 			case 1:
