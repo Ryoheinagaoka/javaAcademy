@@ -17,19 +17,11 @@ public class Janken{
 		Player tom = new Player("tom");
 		Player pepper = new Player("pepper");
 
-		//RandomTacticsとCrazyTacticsをインスタンス化
-		RandomTactics rt = new RandomTactics();
-		CrazyTactics ct = new CrazyTactics();
-
-		//各プレイヤーの戦略をセット
-		tom.setTacticsHand(rt.readTactics());
-		pepper.setTacticsHand(ct.readTactics());
+		//プレイヤーの戦略をセット（各Tacticsをセット）
+		tom.setRandomTactics();
+		pepper.setCrazyTactics();
 
 		//各プレイヤーの手をセット
-		tom.sethand();
-		pepper.sethand();
-
-		//両者のジャンケンの手をセット
 		tom.sethand();
 		pepper.sethand();
 

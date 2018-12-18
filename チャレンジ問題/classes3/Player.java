@@ -13,7 +13,7 @@ public class Player{
 	//名前を格納するインスタンス変数
 	String name;
 	//手を格納するインスタンス変数
-	Integer hand;
+	int hand;
 	//グー、チョキ、パーは定数化
 	final String ROCK= "グー";
 	final String SISSORS = "チョキ";
@@ -25,8 +25,12 @@ public class Player{
 	/**
 	*インターフェース型変数に戦略をセットするメソッド
 	*/
-	public void setTacticsHand(int tactics){
-		tac = tactics;
+	public void setRandomTactics(){
+		this.tac = new RandomTactics();
+	}
+
+	public void setCrazyTactics(){
+		this.tac = new CrazyTactics();
 	}
 
 
@@ -39,7 +43,7 @@ public class Player{
 	*手を設定するインスタンスメソッド
 	*/
 	public void sethand(){
-		this.hand = tac;
+		this.hand = tac.readTactics();
 	}
 
 	/**
@@ -49,13 +53,13 @@ public class Player{
 	public void changehand(int hand){
 		switch(hand){
 			case 1:
-				System.out.println("グー");
+				System.out.println(ROCK);
 				break;
 			case 2:
-				System.out.println("チョキ");
+				System.out.println(SISSORS);
 				break;
 			case 3:
-				System.out.println("パー");
+				System.out.println(PAPER);
 				break;
 		}
 	}

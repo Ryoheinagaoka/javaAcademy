@@ -1,3 +1,6 @@
+//乱数を使用するためにimport
+import java.util.Random;
+
 /**
 * Tacticsインターフェースを実装したクラス
 */
