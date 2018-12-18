@@ -27,7 +27,7 @@ public class Player{
 	/**
 	*手を設定するインスタンスメソッド
 	*/
-	public void sethand(){
+	public void setHand(){
 
 		//Randomクラスの生成
 		Random rnd = new Random();
@@ -44,13 +44,13 @@ public class Player{
 	public void changehand(int hand){
 		switch(hand){
 			case 1:
-				System.out.println("グー");
+				System.out.println(ROCK);
 				break;
 			case 2:
-				System.out.println("チョキ");
+				System.out.println(SISSORS);
 				break;
 			case 3:
-				System.out.println("パー");
+				System.out.println(PAPER);
 				break;
 		}
 	}

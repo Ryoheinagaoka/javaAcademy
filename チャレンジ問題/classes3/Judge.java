@@ -23,45 +23,40 @@ public class Judge{
         *@param hand1 一人目のプレイヤーの手
         *@param hand2 二人目のプレイヤーの手
         */
-        public void judge(String hand1 ,String hand2){
+        public void judge(int hand1 ,int hand2){
                 //player1を主軸として、player2が何を出したかによって
                 //出力を変えるメソッド
-                if(hand1 == "グー"){
-                        switch(hand2){
-                case "グー":
-                        System.out.println("あいこです");
-                        break;
-                case "チョキ":
+            if(hand1 == hand2){
+                System.out.println("あいこです");
+            }else{
+                if(hand1 == 1){
+                    switch(hand2){
+                case 2:
                         System.out.println(this.name1 + "さんの勝ち");
                         break;
-                case "パー":
+                case 3:
                         System.out.println(this.name2 + "さんの勝ち");
                         break;
                 }
-                }else if(hand1 == "チョキ"){
-                        switch(hand2){
-                                case "グー":
-                        System.out.println(this.name2 + "さんの勝ち");
-                        break;
-                case "チョキ":
-                       System.out.println("あいこです");
-                        break;
-                case "パー":
+                }else if(hand1 == 2){
+                    switch(hand2){
+                        case 1:
+                            System.out.println(this.name2 + "さんの勝ち");
+                            break;
+                        case 3:
+                            System.out.println(this.name1 + "さんの勝ち");
+                            break;
+                    }
+                }else if(hand1 == 3){
+                    switch(hand2){
+                    case 1:
                         System.out.println(this.name1 + "さんの勝ち");
                         break;
-                }
-                }else{
-                        switch(hand2){
-                 case "グー":
-                        System.out.println(this.name1 + "さんの勝ち");
-                        break;
-                case "チョキ":
+                    case 2:
                         System.out.println(this.name2 + "さんの勝ち");
                         break;
-                case "パー":
-                        System.out.println("あいこです");
-                        break;
-                        }
-                }
+                    }
+               }
+            }
         }
 }

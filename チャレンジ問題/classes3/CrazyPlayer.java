@@ -1,4 +1,4 @@
-public class CrazyPlayer{
+public class CrazyPlayer extends Player{
 	/**
 	*オーバーライド
 	*手を設定するインスタンスメソッド
@@ -10,6 +10,6 @@ public class CrazyPlayer{
 
 	@Override
 	public void sethand(){
-		this.hand = this.rock;
+		this.hand = 1;
 	}
 }

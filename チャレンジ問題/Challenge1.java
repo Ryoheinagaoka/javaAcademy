@@ -23,7 +23,7 @@ public class Challenge1{
 	*playerhandの変数の中に入っている数字を元にジャンケンの手を出力するメソッド
 	*@param hand playerhand変数を入れる
 	*/
-	public static void changehand(int hand){
+	public static void changeHand(int hand){
 		switch(hand){
 			case 1:
 				System.out.println("グー");

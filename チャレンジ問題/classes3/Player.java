@@ -8,40 +8,27 @@
 //乱数を使用するためにimport
 import java.util.Random;
 
-public class Player {
-
-	//Tactics型の変数を宣言
-	Tactics[] tac ;
-
-	/**
-	*ランダムにじゃんけんの手を返すメソッド
-	*@return
-	*/
-	public RandomTactics readTactics();
-	public CrazyTactics razyReadTactics();
-
-	/**
-	*Tactics型の変数に戦略をセットするメソッド
-	*/
-	void settac(){
-		this.tac[] = readTactics();
-	}
-
-	/**
-	*Tactics型の変数に戦略をセットするメソッド
-	*/
-	void setCrazytac(){
-		this.tac[] = CreazyReadTactics();
-	}
+public class Player{
 
 	//名前を格納するインスタンス変数
 	String name;
 	//手を格納するインスタンス変数
-	String hand;
+	Integer hand;
 	//グー、チョキ、パーは定数化
-	final String rock = "グー";
-	final String scissors = "チョキ";
-	final String paper = "パー";
+	final String ROCK= "グー";
+	final String SISSORS = "チョキ";
+	final String PAPER = "パー";
+
+	//インターフェース型変数
+	Tactics tac;
+
+	/**
+	*インターフェース型変数に戦略をセットするメソッド
+	*/
+	public void setTacticsHand(int tactics){
+		tac = tactics;
+	}
+
 
 	//コンストラクタで任意の名前をセット
 	public Player(String name){
@@ -52,13 +39,24 @@ public class Player {
 	*手を設定するインスタンスメソッド
 	*/
 	public void sethand(){
+		this.hand = tac;
+	}
 
-		if(this.tac == 1){
-			this.hand = this.rock;
-		}else if(this.tac == 2){
-			this.hand = this.scissors;
-		}else{
-			this.hand = this.paper;
+	/**
+	*playerhandの変数の中に入っている数字を元にジャンケンの手を出力するメソッド
+	*@param hand playerhand変数を入れる
+	*/
+	public void changehand(int hand){
+		switch(hand){
+			case 1:
+				System.out.println("グー");
+				break;
+			case 2:
+				System.out.println("チョキ");
+				break;
+			case 3:
+				System.out.println("パー");
+				break;
 		}
 	}
 }

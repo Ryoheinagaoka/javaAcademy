@@ -19,8 +19,8 @@ public class Janken{
 		Player pepper = new Player("pepper");
 
 		//両者のジャンケンの手をセット
-		tom.sethand();
-		pepper.sethand();
+		tom.setHand();
+		pepper.setHand();
 
 		System.out.println(tom.name + "さん対" + pepper.name + "さんのじゃんけんを開始します。");
 		System.out.print(tom.name + "さん : ");

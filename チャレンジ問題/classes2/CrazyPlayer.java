@@ -9,7 +9,7 @@ public class CrazyPlayer extends Player{
 	}
 
 	@Override
-	public void sethand(){
+	public void setHand(){
 		this.hand = 1;
 	}
 }
